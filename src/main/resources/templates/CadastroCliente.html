@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+ 
+<html>
+ <head>
+ <title> Cadastro novo usuario </title>
+ <meta name="description" content="Insira os dados abaixo"/>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+ <link rel="stylesheet" type="text/css" href="/../../css/bootstrap.min.css" media="screen"/>
+  <style type="text/css">
+    body, html{
+    background-color:#34515E;
+   font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 18px;
+
+}
+.register-form label{
+    color: aliceblue;
+    
+}
+</style>
+ </head>
+
+ <body>
+  <h1> Cadastro novo usuario</h1> 
+  <h2> Para fazer parte da **** preencha os dados abaixo</h2><br />
+
+<form action="Script_do_Formulario.php" method="post"></form>
+
+<!-- DADOS PESSOAIS-->
+<div class="container-fluid">
+<form class="register-form" method="POST" action="/cliente">
+<div class="primeiro col-md-6 col-sm-6 col-lg-6">
+	<div class="form-group ">
+    <label for="exampleInputEmail1">Nome Completo</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Nome e Sobrenome" name="nome"/>
+  </div>
+   <div class="form-group ">
+    <label for="exampleInputEmail1">Endereço</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Endereço" nome="endereco"/>
+  </div>
+   <div class="form-group col-md-6 col-sm-6 col-lg-6">
+    <label for="exampleInputEmail1">Bairro</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Bairro" />
+  </div>
+    <div class="form-group col-md-6 col-sm-6 col-lg-6">
+    <label for="exampleInputEmail1">Cep</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Cep" name="cep"/>
+  </div>
+  <div class="form-group ">
+    <label for="exampleInputEmail1">Endereço de E-mail</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email" name="email"/>
+  </div>
+  <div class="form-group ">
+    <label for="exampleInputPassword1">Senha</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="senha" name="senha"/>
+  </div>
+  <div class="form-group ">
+    <label for="exampleInputPassword2">Confirme a senha</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="senha"/>
+  </div>
+  <div class="checkbox">
+    <label>
+      <input type="checkbox"/> Marque para receber em seu email novidades e promoções
+    </label>
+  </div>
+   <div class="checkbox">
+    <label>
+      <input type="checkbox"/>  Concordo com o uso dos meus dados para compra e experiência no site conforme a Política de Privacidade 
+    </label>
+  </div>
+    <button type="submit" class="btn btn-success">Confirmar</button>
+   <button type="submit" class="btn btn-warning">Cancelar</button>
+</div>
+
+
+<div class="segundo col-md-6 col-sm-6 col-lg-6">
+	  <div class="form-group  col-md-6 col-sm-6 col-lg-6">
+    <label for="exampleInputEmail1">Data de Nascimento</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="XX-XX-XXXX" name="dataNascimento"/>
+  </div>
+  <div class="form-group col-md-6 col-sm-6 col-lg-6 ">
+    <label for="exampleInputEmail1">CPF</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="CPF" name="cpf"/>
+  </div>
+  <div class="form-group col-md-6 col-sm-6 col-lg-6 ">
+    <label for="exampleInputEmail1">Numero</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Numero"/>
+  </div>
+  <div class="form-group  col-md-6 col-sm-6 col-lg-6">
+    <label for="exampleInputEmail1">Complemento</label>
+     <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Complemento"/>
+</div>
+ <div class="form-group col-md-6 col-sm-6 col-lg-6">
+    <label for="exampleInputEmail1">Cidade</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Cidade" name="cidade"/>
+  </div>
+  <div class="col-md-6 col-sm-6 col-lg-6">
+  	<label for="exampleInputEmail1 ">Estado</label>
+  	<select class="form-control" name="estado">
+	  <option value="ac">Acre</option> 
+	  <option value="al">Alagoas</option> 
+	  <option value="am">Amazonas</option> 
+	  <option value="ap">Amapá</option> 
+	  <option value="ba">Bahia</option> 
+	  <option value="ce">Ceará</option> 
+	  <option value="df">Distrito Federal</option> 
+	  <option value="es">Espírito Santo</option> 
+	  <option value="go">Goiás</option> 
+	  <option value="ma">Maranhão</option> 
+	  <option value="mt">Mato Grosso</option> 
+	  <option value="ms">Mato Grosso do Sul</option> 
+	  <option value="mg">Minas Gerais</option> 
+	  <option value="pa">Pará</option> 
+	  <option value="pb">Paraíba</option> 
+	  <option value="pr">Paraná</option> 
+	  <option value="pe">Pernambuco</option> 
+	  <option value="pi">Piauí</option> 
+	  <option value="rj">Rio de Janeiro</option> 
+	  <option value="rn">Rio Grande do Norte</option> 
+	  <option value="rs">Rio Grande do Sul</option> 
+	  <option value="ro">Rondônia</option> 
+	  <option value="rr">Roraima</option> 
+	  <option value="sc">Santa Catarina</option> 
+	  <option value="se">Sergipe</option> 
+	  <option value="sp">São Paulo</option> 
+	  <option value="to">Tocantins</option> 
+</select>
+  </div>
+  <div class="form-group">
+  	<label for="status" class="col-sm-2 control-label">Status</label>
+	  	<div class="col-sm-2">
+	  		<select>
+	  			<option value="ATIVO">ATIVO</option>
+	  			<option value="INATIVO">INATIVO</option>
+	  		</select>	
+	  	</div>
+  </div>
+
+</div>
+ 
+  
+ 
+  
+  
+ 
+ 
+ 
+
+  
+ 
+  
+ 
+
+</form>
+
+</div>
+
+
+ </body>
+</html>
