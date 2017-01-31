@@ -11,6 +11,8 @@ import javax.persistence.Id;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 @Entity
 public class Cliente {
 	
@@ -24,8 +26,9 @@ public class Cliente {
 	private String email;
 	private String senha;
 	
-//	@Temporal(TemporalType.DATE)
-	private String dataNascimento;
+	@DateTimeFormat(pattern = "dd/MM/yyyy")
+	@Temporal(TemporalType.DATE)
+	private Date dataNascimento;
 	private String cpf;
 	private String cidade;
 	private String estado;
@@ -75,10 +78,10 @@ public class Cliente {
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
-	public String getDataNascimento() {
+	public Date getDataNascimento() {
 		return dataNascimento;
 	}
-	public void setDataNascimento(String dataNascimento) {
+	public void setDataNascimento(Date dataNascimento) {
 		this.dataNascimento = dataNascimento;
 	}
 	public String getCpf() {
