@@ -1,16 +1,17 @@
-<!DOCTYPE html>
+<!DOCTYPE html >
  
-<html>
+<html xmlns="http://www.thymeleaf.org">
  <head>
  <title> Cadastro novo usuario </title>
  <meta name="description" content="Insira os dados abaixo"/>
  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
- <link rel="stylesheet" type="text/css" href="/../../css/bootstrap.min.css" media="screen"/>
+ <link rel="stylesheet" type="text/css" href="/../../css/bootstrap.min.css" />
+ <link rel="stylesheet" type="text/css" href="/../../css/style.css"/>
   <style type="text/css">
     body, html{
     background-color:#34515E;
    font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 18px;
+    font-size: 14px;
 
 }
 .register-form label{
@@ -29,6 +30,10 @@
 <!-- DADOS PESSOAIS-->
 <div class="container-fluid">
 <form class="register-form" method="POST" action="/cliente">
+	<div class="alert alert-sucess" th:if="${!#strings.isEmpty(mensagem)}">
+		<span th:text="${mensagem}">Cliente cadastrado com sucesso!</span>
+	</div>
+
 <div class="primeiro col-md-6 col-sm-6 col-lg-6">
 	<div class="form-group ">
     <label for="exampleInputEmail1">Nome Completo</label>
@@ -36,7 +41,7 @@
   </div>
    <div class="form-group ">
     <label for="exampleInputEmail1">Endereço</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Endereço" nome="endereco"/>
+    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Endereço" name="endereco"/>
   </div>
    <div class="form-group col-md-6 col-sm-6 col-lg-6">
     <label for="exampleInputEmail1">Bairro</label>
@@ -130,8 +135,7 @@
   	<label for="status" >Status</label>
 	  	<div>
 	  		<select class="form-control" name="status">
-	  			<option value="ATIVO">ATIVO</option>
-	  			<option value="INATIVO">INATIVO</option>
+	  			<option th:each="status : ${todosStatus}" th:value="${status}" th:text="${status.descricao}"></option>
 	  		</select>	
 	  	</div>
   </div>
