@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import br.com.tecnonoticias.ecommerce.model.Cliente;
+import br.com.tecnonoticias.ecommerce.model.NomeEstados;
 import br.com.tecnonoticias.ecommerce.model.StatusCliente;
 import br.com.tecnonoticias.ecommerce.repository.Clientes;
 
@@ -25,6 +26,7 @@ public class CadastroClienteController {
 	public ModelAndView novo(){
 		ModelAndView mv = new ModelAndView("CadastroCliente");
 		mv.addObject("todosStatus", StatusCliente.values());
+		mv.addObject("nomeEstados", NomeEstados.values());
 		return mv;
 		
 	}
@@ -44,8 +46,16 @@ public class CadastroClienteController {
 		return Arrays.asList(StatusCliente.values());
 	}
 	
+	@ModelAttribute("nomeEstados")
+	public List<NomeEstados> todosNomesEstados(){
+		return Arrays.asList(NomeEstados.values());
+	}
+	
 	@RequestMapping
-	public String pesquisa(){
-		return "PesquisaCliente";
+	public ModelAndView pesquisa(){
+		List<Cliente> todosClientes = clientes.findAll();
+		ModelAndView mv = new ModelAndView("PesquisaCliente");
+		mv.addObject("clientes", todosClientes);
+		return mv;
 	}
 }

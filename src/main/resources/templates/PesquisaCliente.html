@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html xmlns="http://www.thymeleaf.org">
  <head>
- <meta charset="UTF-8"/>
-	 <title> Pesquisa usuario </title>
-	 <link rel="stylesheet" type="text/css" href="/../../css/bootstrap.min.css" />
-	 <link rel="stylesheet" type="text/css" href="/../../css/style.css"/>
+ 	<meta charset="UTF-8"/>
+	<title> Pesquisa usuario </title>
+	<link rel="stylesheet" type="text/css" href="/../../css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="/../../css/style.css"/>
 </head>
 
 <body>
+
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<div class="clearfix">
+	   			<h1 class="panel-title aw-titulo-panel">Pesquisa de Cliente</h1>
+	   		</div>
 	<div class="panel-title">
 		<table class="table table-bordered table-striped">
 			<thead>
@@ -17,17 +23,26 @@
 					<th class="text-center col-md2">Nome</th>
 					<th class="text-center col-md2">Cpf</th>
 					<th class="text-center col-md2">Data Nascimento</th>
-					<th class="text-center col-md2">Status</th>
+					<th class="text-center col-md2">Estado</th>
 					<th class="col-md1"></th>
 				</tr>
 			</thead>
 			<tbody>
-				<tr>
-					<td colspan="7">Nenhum cliente encontrado </td>
+				<tr th:each="cliente : ${clientes}">
+					<td class="text-center" th:text="${cliente.nome}"></td>
+					<td class="text-center" th:text="${cliente.cpf}"></td>
+					<td class="text-center" th:text="${{cliente.dataNascimento}}"></td>
+					<td class="text-center" th:text="${cliente.estado}"></td>
+				</tr>
+			<tr>
+					<td colspan="7" th:if="${#lists.isEmpty(clientes)}">Nenhum cliente encontrado </td>
 				</tr>
 			</tbody>
 		</table>
+	</div>	   		
+</div>
 	</div>
+	
 
 </body>
 </html>
