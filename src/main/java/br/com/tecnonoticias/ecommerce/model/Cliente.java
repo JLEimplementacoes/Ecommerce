@@ -20,18 +20,23 @@ public class Cliente {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long codigo;
 	private String nome;
+
+	@DateTimeFormat(pattern = "dd/MM/yyyy")
+	@Temporal(TemporalType.DATE)
+	private Date dataNascimento;
+	
+	private String cpf;
 	private String endereco;
 	private String bairro;
 	private String cep;
 	private String email;
 	private String senha;
-	
-	@DateTimeFormat(pattern = "dd/MM/yyyy")
-	@Temporal(TemporalType.DATE)
-	private Date dataNascimento;
-	private String cpf;
 	private String cidade;
 	private String estado;
+	
+	private String numero;
+	private String complemento;
+	private boolean emailPromocao; 
 	
 	@Enumerated(EnumType.STRING)
 	private StatusCliente statusCliente;
@@ -107,7 +112,26 @@ public class Cliente {
 	}
 	public void setStatusCliente(StatusCliente statusCliente) {
 		this.statusCliente = statusCliente;
+	}	
+	public String getNumero() {
+		return numero;
 	}
+	public void setNumero(String numero) {
+		this.numero = numero;
+	}
+	public String getComplemento() {
+		return complemento;
+	}
+	public void setComplemento(String complemento) {
+		this.complemento = complemento;
+	}
+	public boolean isEmailPromocao() {
+		return emailPromocao;
+	}
+	public void setEmailPromocao(boolean emailPromocao) {
+		this.emailPromocao = emailPromocao;
+	}
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;

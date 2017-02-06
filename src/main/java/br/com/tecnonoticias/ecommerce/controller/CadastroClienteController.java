@@ -21,38 +21,38 @@ public class CadastroClienteController {
 
 	@Autowired
 	private Clientes clientes;
-	
+
 	@RequestMapping("/novo")
-	public ModelAndView novo(){
+	public ModelAndView novo() {
 		ModelAndView mv = new ModelAndView("CadastroCliente");
 		mv.addObject("todosStatus", StatusCliente.values());
 		mv.addObject("nomeEstados", NomeEstados.values());
 		return mv;
-		
+
 	}
-	
+
 	@RequestMapping(method = RequestMethod.POST)
-	public ModelAndView salvar(Cliente cliente){
-		//TODO: Salvar no banco de dados
+	public ModelAndView salvar(Cliente cliente) {
+		// TODO: Salvar no banco de dados
 		clientes.save(cliente);
-		
+
 		ModelAndView mv = new ModelAndView("CadastroCliente");
 		mv.addObject("mensagen", "Cliente cadastrado com sucesso!");
 		return mv;
 	}
-	
+
 	@ModelAttribute("statusTitulo")
-	public List<StatusCliente> todosStatusCliente(){
+	public List<StatusCliente> todosStatusCliente() {
 		return Arrays.asList(StatusCliente.values());
 	}
-	
+
 	@ModelAttribute("nomeEstados")
-	public List<NomeEstados> todosNomesEstados(){
+	public List<NomeEstados> todosNomesEstados() {
 		return Arrays.asList(NomeEstados.values());
 	}
-	
+
 	@RequestMapping
-	public ModelAndView pesquisa(){
+	public ModelAndView pesquisa() {
 		List<Cliente> todosClientes = clientes.findAll();
 		ModelAndView mv = new ModelAndView("PesquisaCliente");
 		mv.addObject("clientes", todosClientes);
