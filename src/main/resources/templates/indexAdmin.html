@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+
+    <title>Cadastro de Produtos</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/../../static/startbootstrapages/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- MetisMenu CSS -->
+    <link href="/../../static/startbootstrapages/vendor/metisMenu/metisMenu.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    <link href="/../../static/startbootstrapages/dist/css/sb-admin-2.css" rel="stylesheet"/>
+
+    <!--css cadastro produto-->
+    <link href="/../../static/startbootstrapages/dist/css/cadastro_produtos.css" rel="stylesheet"/>
+
+    <!-- Morris Charts CSS -->
+    <link href="/../../static/startbootstrapages/vendor/morrisjs/morris.css" rel="stylesheet"/>
+
+    <!-- Custom Fonts -->
+    <link href="/../../static/startbootstrapages/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Bello Joy Admin</a>
+            </div>
+            <!-- /.navbar-header -->
+
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-envelope fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-messages">
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <strong>John Smith</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>Yesterday</em>
+                                    </span>
+                                </div>
+                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <strong>John Smith</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>Yesterday</em>
+                                    </span>
+                                </div>
+                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <strong>John Smith</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>Yesterday</em>
+                                    </span>
+                                </div>
+                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="#">
+                                <strong>Read All Messages</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-messages -->
+                </li>
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-tasks fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-tasks">
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p>
+                                        <strong>Task 1</strong>
+                                        <span class="pull-right text-muted">40% Complete</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                            <span class="sr-only">40% Complete (success)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p>
+                                        <strong>Task 2</strong>
+                                        <span class="pull-right text-muted">20% Complete</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                            <span class="sr-only">20% Complete</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p>
+                                        <strong>Task 3</strong>
+                                        <span class="pull-right text-muted">60% Complete</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                            <span class="sr-only">60% Complete (warning)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p>
+                                        <strong>Task 4</strong>
+                                        <span class="pull-right text-muted">80% Complete</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                            <span class="sr-only">80% Complete (danger)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="#">
+                                <strong>See All Tasks</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-tasks -->
+                </li>
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-bell fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-alerts">
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-comment fa-fw"></i> New Comment
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-twitter fa-fw"></i> 3 New Followers
+                                    <span class="pull-right text-muted small">12 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-envelope fa-fw"></i> Message Sent
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-tasks fa-fw"></i> New Task
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-upload fa-fw"></i> Server Rebooted
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="#">
+                                <strong>See All Alerts</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-alerts -->
+                </li>
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+            <!-- /.navbar-top-links -->
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li class="sidebar-search">
+                            <div class="input-group custom-search-form">
+                                <input type="text" class="form-control" placeholder="Search..."/>
+                                <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                            </div>
+                            <!-- /input-group -->
+                        </li>
+                        <li>
+                            <a href="indexAdmin.html"><i class="fa fa-shopping-cart"></i> Cadastro de Produtos</a>
+                        </li>
+                        <li>
+                            <a href="listaProdutos.html"><i class="fa fa-list"></i> Lista de Produtos</a>
+                        </li>
+                        <li>
+                            <a href="clienteAdmin.html"><i class="fa fa-table fa-fw"></i> Clientes</a>
+                        </li>
+                        <li>
+                            <a href="banner.html"><i class="fa fa-picture-o"></i> Banners</a>
+                        </li>
+                        <li>
+                            <a href="emailPromocional.html"><i class="fa fa-envelope-o"></i> Email Promocional</a>
+                        </li>
+                        <li>
+                            <a href="contato.html"><i class="fa fa-envelope-o"></i> Contatos</a>
+                        </li>
+                        <li>
+                            <a href="configuracao.html"><i class="fa fa-edit fa-fw"></i> Configurações</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Cadastro de Produtos</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+               <div class="col-xs-12">
+                   <div class="col-xs-6">
+                       <form>
+                            <div class="form-group">
+                                <label for="codigo_produto_label">Código do Produto</label>
+                                <input type="text" class="form-control" id="codigo_produto"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="nome_produto_label">Nome do Produto</label>
+                                <input type="text" class="form-control" id="nome_produto"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="descricao_produto_label">Descrisão</label>
+                                <textarea class="form-control" rows="10"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="caracteristicas_produto_label">Caracteristicas</label>
+                                <input type="text" class="form-control" id="caracteristicas_produto"/>
+                                <button type="button" class="btn btn-success">Adicionar</button>
+                            </div>
+                            <div class="form-group">
+                                <label for="tecnicos_produto_label">Dados Técnicos</label>
+                                <input type="text" class="form-control" id="tecnicos_produto"/>
+                                <button type="button" class="btn btn-success">Adicionar</button>
+                            </div>
+                            <div class="form-group">
+                                <label for="itens_produto_label">Itens Inclusos</label>
+                                <input type="text" class="form-control" id="itens_produto"/>
+                                <button type="button" class="btn btn-success">Adicionar</button>
+                            </div>
+                            <div class="form-group">
+                                <label for="tamanho_produto_label">Tamanhos Dísponiveis</label>
+                                <input type="text" class="form-control" id="tamanho_produto"/>
+                                <button type="button" class="btn btn-success">Adicionar</button>
+                            </div>
+                            <div class="form-group">
+                                <label for="cores_produto_label">Cores Dísponiveis</label>
+                                <input type="text" class="form-control" id="cores_produto"/>
+                                <button type="button" class="btn btn-success">Adicionar</button>
+                            </div>
+                            <div class="form-group">
+                                <label for="estoque_produto_label">Quantidade em Estoque</label>
+                                <input type="number" class="form-control" id="estoque_produto"/>
+                            </div>
+                       </form>
+                   </div>
+                   <div class="col-xs-6">
+                       <form>
+                         <div class="form-group">
+                            <label for="exampleInputFile">Imagem do Produto 1</label>
+                            <input type="file" id="produto_imagem"/>
+                            <p class="help-block">Escolha uma imagem</p>
+                          </div>
+                         <div class="form-group">
+                            <label for="exampleInputFile">Imagem do Produto 2</label>
+                            <input type="file" id="produto_imagem"/>
+                            <p class="help-block">Escolha uma imagem</p>
+                          </div>
+                         <div class="form-group">
+                            <label for="exampleInputFile">Imagem do Produto 3</label>
+                            <input type="file" id="produto_imagem"/>
+                            <p class="help-block">Escolha uma imagem</p>
+                          </div>
+                         <div class="form-group">
+                            <label for="exampleInputFile">Imagem do Produto 4</label>
+                            <input type="file" id="produto_imagem"/>
+                            <p class="help-block">Escolha uma imagem</p>
+                          </div>
+                       </form>
+                   </div>
+               </div>
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Valores do Produto</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-3">
+                    <form>
+                        <div class="form-group">
+                            <label for="valor_produto_label">Valor do Produto</label>
+                            <input type="number" class="form-control" id="valor_produto"/>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-xs-3">
+                    <form>
+                        <div class="form-group">
+                            <label for="desconto_produto_label">Promoção - Valor do Desconto</label>
+                            <input type="number" class="form-control" id="desconto_produto"/>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-xs-2">
+                    <label for="tipo_desconto_produto_label">Tipo</label>
+                    <select class="form-control">
+                        <option>%</option>
+                        <option>$</option>
+                    </select>
+                </div>
+                <div class="col-xs-4">
+                    <label for="liberacao_produto_label">Detalhes do Produto para Cadastro</label>
+                    <label class="checkbox-inline col-xs-12">
+                      <input type="checkbox" id="inlineCheckbox1" value="option1"/> Produto em Promoção
+                    </label>
+                    <label class="checkbox-inline col-xs-12" style="margin-left: 0;">
+                      <input type="checkbox" id="inlineCheckbox1" value="option1"/> Frete Grátis
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 buttons-produtos">
+                    <button type="button" class="btn btn-warning">Novo</button>
+                    <button type="button" class="btn btn-warning">Salvar</button>
+                    <button type="button" class="btn btn-primary">Editar</button>
+                    <button type="button" class="btn btn-danger">Excluir</button>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="/../../static/startbootstrapages/vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/../../static/startbootstrapages/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="/../../static/startbootstrapages/vendor/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Morris Charts JavaScript -->
+    <script src="/../../static/startbootstrapages/vendor/raphael/raphael.min.js"></script>
+    <script src="/../../static/startbootstrapages/vendor/morrisjs/morris.min.js"></script>
+    <script src="/../../static/startbootstrapages/data/morris-data.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="/../../static/startbootstrapages/dist/js/sb-admin-2.js"></script>
+
+</body>
+
+</html>
