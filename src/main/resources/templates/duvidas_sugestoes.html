@@ -16,7 +16,18 @@
 
     <!-- Custom CSS -->
     <link href="../static/css/shop-item.css" rel="stylesheet">
+    <style type="text/css">
+body, html {
+    padding-top: 10px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 14px;
+}
 
+.borda {
+    border: 2px solid #9e0808;
+    padding-top: 3%;
+}
+</style>
  
 
 </head>
@@ -42,8 +53,8 @@
     </nav>
 
     <! Page Content -->
-    <div class="container">
-         <div class="container col-md-6 col-sm-6 col-lg-6">
+    <div class="container ">
+         <div class="container borda col-md-6 col-sm-6 col-lg-6">
             <div class="form-group ">
                 <label for="labelNome">Nome</label>
                 <input type="text" class="form-control" id="nome" placeholder="Nome" name="nome"/>
@@ -64,6 +75,7 @@
                 <label for="labelMensagem">Mensagem</label>
                 <textarea class="form-control" rows="6" id="mensagem"></textarea>
             </div>
+            <button type="button" class="btn btn-success">Enviar</button>
 
         <hr>
 
