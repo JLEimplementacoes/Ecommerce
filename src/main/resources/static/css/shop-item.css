@@ -44,11 +44,11 @@ body, html {
 }
 
 .navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover {
-	color: #c5cc00;
+	color: #ffffff;
     background-color: transparent;
 }
 .navbar-inverse .navbar-brand:focus, .navbar-inverse .navbar-brand:hover {
-	color: #c5cc00;
+	color: #ffffff;
 }
 .navbar-inverse .navbar-nav>li>a {
     color: #c5cc00;
