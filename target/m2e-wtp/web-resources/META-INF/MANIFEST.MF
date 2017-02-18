@@ -1,7 +1,11 @@
 Manifest-Version: 1.0
 Implementation-Title: ecommerce
 Implementation-Version: 0.0.1-SNAPSHOT
+<<<<<<< HEAD
 Built-By: hank
+=======
+Built-By: root
+>>>>>>> 1c393f64ce3205e4e57d7a90681807a43c4f041a
 Implementation-Vendor-Id: br.com.tecnonoticias
 Build-Jdk: 1.8.0_121
 Implementation-URL: http://projects.spring.io/spring-boot/ecommerce/
